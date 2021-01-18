@@ -8,11 +8,38 @@ import styles from "./../styles/components.module.css"
 /////////////////////////////////////////////
 /////////////////////////////////////////////
 function Photogallery(props){
-    
-    console.log(photogallery)
-
-
 const [picIndex, setPicIndex] = useState(0)
+    
+//IMAGE GRID    
+//IMAGE GRID    
+const imageThumbnailGrid=()=>{
+    let anImage = photogallery.map((elem, i)=>
+        <div key={`image${i}`} 
+            className={styles.anImageThumbnail}
+            onClick={()=>{
+                setPicIndex(i)
+                props.closeImgViewer(true)
+            }}> 
+        <Image
+            width={200}
+            height={150}
+            alt={elem.description}
+            src={elem.pathname}
+            />
+        <div className={styles.thumbnailSub}>
+        {elem.description}
+        </div>    
+        </div>
+    )
+    return(
+        <>
+            <div className={styles.imageGrid}>
+            {anImage}
+            </div>
+        </>
+    )
+}
+
 
 //IMAGE MODAL
 //IMAGE MODAL
@@ -69,8 +96,12 @@ const imageControllers=()=>{
     )
 }
 
+
+//////////////////////////
+console.log(photogallery)
     return(
         <>
+            {imageThumbnailGrid()}
             {imageDisplayer()}
         </>
     )

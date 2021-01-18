@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+.imageGrid{
+    padding: 21px;
+    background-color: teal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.anImageThumbnail{
+    padding: 5px;
+    margin: 12px 21px;
+    box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.455);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnailSub{
+    width: 200px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 0.8em;
+    text-align: end;
+    margin: 6px 0px;
+}
 
 .imgControllers{
     display: flex;
