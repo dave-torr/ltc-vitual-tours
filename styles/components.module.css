@@ -1,0 +1,37 @@
+
+.imgControllers{
+    display: flex;
+    justify-content: space-between;
+}
+.disabledController{
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.319);
+    padding: 0 35px;
+    margin: 10px;
+}
+
+.controllerArrows{
+    font-size: 3em;
+    padding: 0 35px;
+    margin: 10px;
+    transition: all ease-in 0.3s;
+}
+
+.controllerArrows:hover{
+    box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.455);
+    cursor: pointer;
+}
+
+.imageDescriptionTxt{
+    font-style: italic;
+    margin: 3px 12px;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.imageLocationTxt{
+    margin: 3px 12px;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-align: end;
+}

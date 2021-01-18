@@ -1,63 +1,57 @@
 import Head from 'next/head'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 
+import {Photogallery} from "./../components/photogallery"
+
 export default function Home() {
+
+const [imageDialog, setImageDialog] = useState(false)
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Explorer Chick - Galapagos Virtual Tour</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        Logo and image intro
+        <br></br>
+        Welcome div, with short explanation of V.T. app
+        <br></br>
+        Galapagos Photo Gallery,  & 360 deg visualizer
+        <br></br>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+  {/* NON NVP - Social Image Sharing */}
+        <div onClick={()=>setImageDialog(true)}> 
+        OPEN </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <Photogallery 
+          open={imageDialog}
+          closeImgViewer={setImageDialog}
+          />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+         
+        <br></br>
+        video player
+        <br></br>
+        Galapagos Packing List
+        <br></br>
+        Galapagos Island Hopping Tour invitation / discount
+        <br></br>
+        Music Player: Korioto / Pichirilo Radioactivo
+        <br></br>
       </main>
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://explorerchick.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          An {" "}
+          <img src="/logos/fontface-blk.PNG" alt="Explorer Chick Logo" className={styles.logo} /> {" "} virtual experience
         </a>
       </footer>
     </div>
