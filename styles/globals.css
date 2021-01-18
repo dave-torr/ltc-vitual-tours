@@ -15,4 +15,7 @@ a {
   box-sizing: border-box;
 }
 
-
+main{
+  overflow-x: hidden;
+  box-sizing: border-box;
+}

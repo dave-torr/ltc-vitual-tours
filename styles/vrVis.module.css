@@ -1,0 +1,13 @@
+.vrGenCont{
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 100px;
+    background-color: rgba(178, 34, 34, 0.673);
+}
+
+.VrImage{
+    height: 300px;
+    width: 400px;
+    position: relative;
+    z-index: 1;
+}

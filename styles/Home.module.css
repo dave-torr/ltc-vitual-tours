@@ -30,29 +30,51 @@
     margin: 12px 0;
 }
 
+.landingSubTitle{
+  border-top: solid 4px teal;
+  border-bottom: solid 4px teal;
+  font-size: 1.3em;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 21px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
 .extraControllers{
   width: 99vw;
   overflow-x: unset;
   min-height: 30px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  
 }
 
 .anAddOnController{
-  /* background-color: violet; */
   width: 45%;
+  color: white;
+
+}
+
+.InactiveControllerTab{
+  min-height: 100px;
+  background-color: rgb(76, 75, 83);
 }
 
 .ControllerTab{
-    border: solid 3px rgb(228, 11, 145);
-    width: fit-content;
-    padding: 6px 15px;
+  color: black;
+  border: solid 3px rgb(228, 11, 145);
+  width: fit-content;
+  padding: 6px 15px;
 }
 
 .ControllerTab:hover{
-    background-color: black;
-    color: white;
-    transform: translateY(2px);
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 .footer img {

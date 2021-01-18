@@ -13,6 +13,7 @@ function Photogallery(props){
 //PHOTOGALLERY COLLAPSER
 //PHOTOGALLERY COLLAPSER
 const [openGallery, setOpenGallery] = useState(true)
+const [galleryExpander, setgalleryExpander] =useState(false)
 const TitleAndCollapser=()=>{
     return(
         <>  
@@ -42,7 +43,15 @@ const TitleAndCollapser=()=>{
 //IMAGE GRID    
 //IMAGE GRID    
 const imageThumbnailGrid=()=>{
-    let anImage = photogallery.map((elem, i)=>
+    let galThumbnailNumber;
+
+    if(!galleryExpander){
+        galThumbnailNumber=photogallery.slice(0,4);
+    } else {
+        galThumbnailNumber=photogallery
+    }
+
+    let anImage = galThumbnailNumber.map((elem, i)=>
         <div key={`image${i}`} 
             className={styles.anImageThumbnail}
             onClick={()=>{
@@ -63,7 +72,19 @@ const imageThumbnailGrid=()=>{
     return(
         <>
             <div className={styles.imageGrid}>
-            {anImage}
+                {anImage}
+                {galleryExpander?
+                <>
+                    <div className={styles.galleryExpanderCont} onClick={()=>setgalleryExpander(false)}> 
+                        &#9969; <br></br>
+                        Show less pictures!
+                    </div>
+                </>:<>
+                    <div className={styles.galleryExpanderCont} onClick={()=>setgalleryExpander(true)}> 
+                        &#9969; <br></br>
+                        Show all 15 pictures in gallery!
+                    </div>
+                </>}
             </div>
         </>
     )
