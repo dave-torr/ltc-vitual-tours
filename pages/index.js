@@ -3,10 +3,43 @@ import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 import {Photogallery} from "./../components/photogallery"
+import {VideoPlayer} from "./../components/videoPlayer"
 
 export default function Home() {
 
 const [imageDialog, setImageDialog] = useState(false)
+
+
+const [koriotoController, setKoriotoController] = useState(true)
+const VirtualtourExtras=()=>{
+  return(
+    <>
+      <div className={styles.extrasGenCont}>
+        <div className={styles.landingTitle}> Vitual Tour Extras! </div>
+        <div className={styles.extraControllers}>
+          <div className={styles.anAddOnController}>
+            {koriotoController?
+                <>
+                    <div className={styles.ControllerTab}
+                    onClick={()=>{setKoriotoController(false)}}> 
+                        Close Korioto Video Player &#9932;
+                    </div>
+                </>:<>
+                    <div className={styles.ControllerTab}
+                    onClick={()=>{setKoriotoController(true)}}>
+                      Short Korioto intro <br></br> 
+                        Open &#9732;
+                    </div>
+                </>}
+          </div>
+          <div className={styles.anAddOnController}>
+            Pichirilo Controller
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
 
   return (
     <div className={styles.container}>
@@ -24,15 +57,13 @@ const [imageDialog, setImageDialog] = useState(false)
         <br></br>
 
   {/* NON NVP - Social Image Sharing */}
-        <div onClick={()=>setImageDialog(true)}> 
-        OPEN </div>
+
 
         <Photogallery 
           open={imageDialog}
           closeImgViewer={setImageDialog}
           />
 
-         
         <br></br>
         video player
         <br></br>
@@ -41,8 +72,16 @@ const [imageDialog, setImageDialog] = useState(false)
         Galapagos Island Hopping Tour invitation / discount
         <br></br>
         Music Player: Korioto / Pichirilo Radioactivo
-        <br></br>
+
+        {VirtualtourExtras()}
+        {koriotoController&&<>
+          <VideoPlayer
+            content={"korioto"}
+          /></>}
       </main>
+
+
+
 
       <footer className={styles.footer}>
         <a

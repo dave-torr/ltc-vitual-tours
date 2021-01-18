@@ -1,106 +1,106 @@
 [
     {
         "pathname":"/photogallery/vitualTour-01.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"Leaving a postcard at Ecuador's oldest Mailbox!",
         "location":"Post Office Bay - Floreana"
     },
     {
         "pathname":"/photogallery/vitualTour-02.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"A male frigate bird with his fabulous 'Gula' on display",
         "location":"Genovesa Island"
     },
     {
         "pathname":"/photogallery/vitualTour-03.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"The unique Santa Fe Land Iguana",
         "location":"The Bay at Santa Fe"
     },
     {
         "pathname":"/photogallery/vitualTour-04.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"The amazing Kicker Rock volcanic formation",
         "location":"Kicker Rock - San Cristobal"
     },
     {
         "pathname":"/photogallery/vitualTour-05.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"Looking out at the gorgeous Junco Lake",
         "location":"Laguna el Junco - San Cristobal"
     },
     {
         "pathname":"/photogallery/vitualTour-06.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"A cute sea lion comes to greet us!",
         "location":"Gardner Bay - Espanola"
     },
     {
         "pathname":"/photogallery/vitualTour-07.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"A marine iguana reunion",
         "location":"Punta Espinoza - Fernandina"
     },
     {
         "pathname":"/photogallery/vitualTour-08.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"Riding the zodiac through the Chinese Hat Channel",
         "location":"Chinese Hat - Santiago"
     },
     {
         "pathname":"/photogallery/vitualTour-09.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"Beach Time",
         "location":"Gardner Bay - Espanola"
     },
     {
         "pathname":"/photogallery/vitualTour-10.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"Full display of colors from a Marina Iguana",
         "location":"Tintoreras - Isabela"
     },
     {
         "pathname":"/photogallery/vitualTour-11.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"A lava desert",
         "location":"Punta Moreno - Isabela"
     },
     {
         "pathname":"/photogallery/vitualTour-12.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"A gorgeous Hawksbill Turtle",
         "location":"Elizabeth Bay - Isabela"
     },
     {
         "pathname":"/photogallery/vitualTour-13.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"Sunset behind Marianita Islet",
         "location":"Elizabeth Bay - Isabela"
     },
     {
         "pathname":"/photogallery/vitualTour-14.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"A well fed Land Iguana",
         "location":"Urbina Bay - Isabela"
     },
     {
         "pathname":"/photogallery/vitualTour-15.jpg",
-        "dimentionHeight":"768",
-        "dimentionWidth":"1024",
+        "dimentionHeight":"450",
+        "dimentionWidth":"600",
         "description":"the awesome Red Sand Beach of Rabida",
         "location":"Playa Roja - Rabida"
     }

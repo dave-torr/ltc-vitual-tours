@@ -22,6 +22,38 @@
   justify-content: center;
   align-items: center;
 }
+.landingTitle{
+    width: 99vw;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 12px 0;
+}
+
+.extraControllers{
+  width: 99vw;
+  overflow-x: unset;
+  min-height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.anAddOnController{
+  /* background-color: violet; */
+  width: 45%;
+}
+
+.ControllerTab{
+    border: solid 3px rgb(228, 11, 145);
+    width: fit-content;
+    padding: 6px 15px;
+}
+
+.ControllerTab:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(2px);
+}
 
 .footer img {
   margin-left: 0.5rem;
@@ -33,12 +65,11 @@
   align-items: center;
 }
 
-
-
-
 .logo {
   height: 50px;
 }
+
+
 
 @media (max-width: 600px) {
 

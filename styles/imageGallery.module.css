@@ -1,8 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
+.galleryGenCont{
+    margin: unset;
+    padding: unset;
+    overflow-x: unset;
+}
+
+.landingTitle{
+    width: 99vw;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 12px 0;
+}
+
+.imageTabCont{
+    width: 99vw;
+    border-bottom: solid 6px rgb(228, 11, 145);
+    transition: all ease-in 0.3s;
+    margin: 0;
+}
+
+.imageControllerTab{
+    border: solid 3px rgb(228, 11, 145);
+    width: fit-content;
+    padding: 6px 15px;
+    transform: translateY(2px);
+}
+
+.closingTab:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(2px);
+}
+
 .imageGrid{
+    width: 99vw;
+    margin: unset;
     padding: 21px;
-    background-color: teal;
+    border-bottom: solid 3px rgb(228, 11, 145);
+    background-color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,6 +53,10 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+}
+
+.anImageThumbnail:hover{
+    cursor: pointer;
 }
 
 .thumbnailSub{
@@ -61,4 +102,14 @@
     font-size: 0.7em;
     font-weight: 700;
     text-align: end;
+}
+
+@media (max-width: 600px) {
+
+    .anImageThumbnail{
+        margin: 6px 6px;
+    }
+    .imageGrid{
+        padding: 21px 6px;
+    }
 }

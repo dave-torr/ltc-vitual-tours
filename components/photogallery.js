@@ -4,12 +4,41 @@ import Image from "next/image"
 
 import photogallery from "./../data/photogallery.json"
 
-import styles from "./../styles/components.module.css"
+import styles from "./../styles/imageGallery.module.css"
 /////////////////////////////////////////////
 /////////////////////////////////////////////
 function Photogallery(props){
-const [picIndex, setPicIndex] = useState(0)
-    
+    const [picIndex, setPicIndex] = useState(0)
+
+//PHOTOGALLERY COLLAPSER
+//PHOTOGALLERY COLLAPSER
+const [openGallery, setOpenGallery] = useState(true)
+const TitleAndCollapser=()=>{
+    return(
+        <>  
+            <div style={{width:"100vw"}}>
+            <div className={styles.landingTitle}> 
+                Image Gallery
+            </div>
+            <div className={styles.imageTabCont}>
+                {openGallery?
+                <>
+                    <div className={styles.imageControllerTab}
+                    onClick={()=>{setOpenGallery(false)}}> 
+                        Close &#9932;
+                    </div>
+                </>:<>
+                    <div className={styles.imageControllerTab}
+                    onClick={()=>{setOpenGallery(true)}}> 
+                        Open &#9732;
+                    </div>
+                </>}
+            </div>
+            </div>
+        </>
+    )
+}
+
 //IMAGE GRID    
 //IMAGE GRID    
 const imageThumbnailGrid=()=>{
@@ -27,7 +56,7 @@ const imageThumbnailGrid=()=>{
             src={elem.pathname}
             />
         <div className={styles.thumbnailSub}>
-        {elem.description}
+            {elem.description}
         </div>    
         </div>
     )
@@ -39,7 +68,6 @@ const imageThumbnailGrid=()=>{
         </>
     )
 }
-
 
 //IMAGE MODAL
 //IMAGE MODAL
@@ -97,12 +125,16 @@ const imageControllers=()=>{
 }
 
 
-//////////////////////////
-console.log(photogallery)
+/////////////////////////////////////
+/////////////////////////////////////
     return(
-        <>
-            {imageThumbnailGrid()}
+        <div className={styles.galleryGenCont}>
+            {TitleAndCollapser()}
+            {openGallery&&
+            <>
+                {imageThumbnailGrid()}
+            </>}
             {imageDisplayer()}
-        </>
+        </div>
     )
 } export {Photogallery}

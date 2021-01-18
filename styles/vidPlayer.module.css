@@ -1,0 +1,69 @@
+.koriotoGenCont{
+    box-sizing: border-box;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow-x: unset;
+    width: 99vw;
+}
+
+.koriotoText{
+    color: whitesmoke;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.koriotoLogo{
+    width: 250px;
+    margin-bottom: 12px;
+}
+
+.koriotoQuote{
+    margin-top: 12px;
+    padding: 12px 0px;
+    border-top: solid 2px rgb(228, 11, 145);
+}
+
+.YacumaPlayer{
+    border-left: solid 2px rgb(228, 11, 145);
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.socialLinks{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 1000px) {
+
+    .koriotoText{
+        width: 60%;
+    }
+
+    .koriotoGenCont{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .YacumaPlayer{
+        border-top: solid 6px rgb(228, 11, 145);
+        border-left: solid 2px rgba(228, 11, 145, 0);
+        border-right: solid 2px rgba(228, 11, 145, 0);
+        margin-bottom: 12px;
+    }
+
+
+}
