@@ -26,12 +26,12 @@ const TitleAndCollapser=()=>{
                 <>
                     <div className={styles.imageControllerTab}
                     onClick={()=>{setOpenGallery(false)}}> 
-                        Close &#9932;
+                        Close Gallery &#9932;
                     </div>
                 </>:<>
                     <div className={styles.imageControllerTab}
                     onClick={()=>{setOpenGallery(true)}}> 
-                        Open &#9732;
+                        Open Gallery &#9732;
                     </div>
                 </>}
             </div>

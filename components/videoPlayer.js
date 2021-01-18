@@ -4,11 +4,8 @@ import Image from "next/image"
 
 function VideoPlayer(props){
 
-
-
-
-// Korioto Yacuma Playlist
 const yacumaPlayerCont=()=>{
+
     return(
         <>
             <div className={styles.koriotoText}>

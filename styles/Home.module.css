@@ -48,7 +48,7 @@
   overflow-x: unset;
   min-height: 30px;
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   
 }
@@ -95,5 +95,8 @@
 
 @media (max-width: 600px) {
 
-
+.landingSubTitle{
+  width: 80%;
+  margin-left: 10%;
+}
 }

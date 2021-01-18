@@ -23,8 +23,8 @@ const VirtualtourExtras=()=>{
 
   return(
     <>
-      <div className={styles.extrasGenCont}>
-        <div className={styles.landingTitle}> Vitual Tour Extras! </div>
+      <div className={styles.extrasGenCont} id="VtExtrasAnchor" >
+        <div className={styles.landingTitle} > Vitual Tour Extras! </div>
         <div className={styles.landingSubTitle}> We are happy to share these exclusive Ecuadorian artits' features, which are almost guaranteed to make you dance.  </div>
         <div className={styles.extraControllers}>
           <div className={styles.anAddOnController}>
@@ -35,14 +35,13 @@ const VirtualtourExtras=()=>{
                         Close Korioto Video Player &#9932;
                     </div>
                 </>:<>
-                    <div className={styles.InactiveControllerTab}
-                    onClick={()=>{setKoriotoController(true)}}>
-                      Spinning logo <br></br>Short Korioto intro <br></br> 
-                        Open &#9732;
+                    <div className={styles.ControllerTab}
+                    onClick={()=>{setKoriotoController(true)}}> 
+                        Open Korioto Player &#9732;
                     </div>
                 </>}
           </div>
-          <div className={styles.anAddOnController}>
+          {/* <div className={styles.anAddOnController}>
             {pichiController?
                 <>
                     <div className={styles.ControllerTab}
@@ -56,14 +55,40 @@ const VirtualtourExtras=()=>{
                         Open &#9732;
                     </div>
                 </>}
-          </div>
+          </div> */}
         </div>
       </div>
     </>
   )
 }
 
-
+const appIndex=()=>{
+  return(
+    <>
+      <div className={styles.landingTitle} > Index </div>
+        <div className={styles.aScroller} onClick={()=>{
+          let PhotoScroller = document.getElementById("picGalleryAnchor");
+          PhotoScroller.scrollIntoView({behavior: "smooth"});
+          }}> 
+          Photo Gallery </div>
+        <div className={styles.aScroller} onClick={()=>{
+          let PackingListScroller = document.getElementById("packingListAnchor");
+          PackingListScroller.scrollIntoView({behavior: "smooth"});
+          }}> 
+          Galapagos Packing List </div>
+        <div className={styles.aScroller} onClick={()=>{
+          let tourDatesScroller = document.getElementById("tourdatesAnddiscountAnchor");
+          tourDatesScroller.scrollIntoView({behavior: "smooth"});
+          }}> 
+          Galapagos Island Hopping Tour </div>
+        <div className={styles.aScroller} onClick={()=>{
+          let ExtrasScroller = document.getElementById("VtExtrasAnchor");
+          ExtrasScroller.scrollIntoView({behavior: "smooth"});
+          }}> 
+          Additionals </div>
+    </>
+  )
+}
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
@@ -77,41 +102,37 @@ return (
 
 {/* INTRO */}
   <VtIntro 
-  
   />
 
   
 {/* AppExplainer */}
   <AppExplainer 
-  
   />
+
+{/* Index and Scroller */}
+  {appIndex()}
 
 {/* NON NVP - Social Image Sharing */}
   {/* <VrDisplayer
 
   /> */}
 
+<div id="picGalleryAnchor"> </div>
   <Photogallery 
     open={imageDialog}
     closeImgViewer={setImageDialog}
     />
 
 {/* PackingList */}
+<div id="packingListAnchor"> </div>
   <PackingList 
-  
-  />
+    />
 
 
 {/* DiscountAndInvite */}
+<div id="tourdatesAnddiscountAnchor"> </div>
   <DiscountAndInvite 
-  
-  />    
-
-        <br></br>
-        video player
-        <br></br>
-
-        Music Player: Korioto / Pichirilo Radioactivo
+    />    
 
 {/* Extras */}
   {VirtualtourExtras()}
