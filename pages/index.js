@@ -65,27 +65,31 @@ const VirtualtourExtras=()=>{
 const appIndex=()=>{
   return(
     <>
-      <div className={styles.landingTitle} > Index </div>
-        <div className={styles.aScroller} onClick={()=>{
-          let PhotoScroller = document.getElementById("picGalleryAnchor");
-          PhotoScroller.scrollIntoView({behavior: "smooth"});
-          }}> 
-          Photo Gallery </div>
-        <div className={styles.aScroller} onClick={()=>{
-          let PackingListScroller = document.getElementById("packingListAnchor");
-          PackingListScroller.scrollIntoView({behavior: "smooth"});
-          }}> 
-          Galapagos Packing List </div>
-        <div className={styles.aScroller} onClick={()=>{
-          let tourDatesScroller = document.getElementById("tourdatesAnddiscountAnchor");
-          tourDatesScroller.scrollIntoView({behavior: "smooth"});
-          }}> 
-          Galapagos Island Hopping Tour </div>
-        <div className={styles.aScroller} onClick={()=>{
-          let ExtrasScroller = document.getElementById("VtExtrasAnchor");
-          ExtrasScroller.scrollIntoView({behavior: "smooth"});
-          }}> 
-          Additionals </div>
+      <div className={styles.indexCont}>
+        <div className={styles.landingTitle} > Index </div>
+        <div className={styles.scrollersCont}>
+          <div className={styles.aScroller} onClick={()=>{
+            let PhotoScroller = document.getElementById("picGalleryAnchor");
+            PhotoScroller.scrollIntoView({behavior: "smooth"});
+            }}> 
+            &#9886; Photo Gallery </div>
+          <div className={styles.aScroller} onClick={()=>{
+            let PackingListScroller = document.getElementById("packingListAnchor");
+            PackingListScroller.scrollIntoView({behavior: "smooth"});
+            }}> 
+            &#9745; Galapagos Packing List </div>
+          <div className={styles.aScroller} onClick={()=>{
+            let tourDatesScroller = document.getElementById("tourdatesAnddiscountAnchor");
+            tourDatesScroller.scrollIntoView({behavior: "smooth"});
+            }}> 
+            &#9965; Galapagos Island Hopping Tour </div>
+          <div className={styles.aScroller} onClick={()=>{
+            let ExtrasScroller = document.getElementById("VtExtrasAnchor");
+            ExtrasScroller.scrollIntoView({behavior: "smooth"});
+            }}> 
+            &#9835; Additionals </div>
+        </div>
+      </div>
     </>
   )
 }

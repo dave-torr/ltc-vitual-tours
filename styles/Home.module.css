@@ -72,8 +72,6 @@
 }
 
 .ControllerTab:hover{
-  background-color: black;
-  color: white;
   cursor: pointer;
 }
 
@@ -91,12 +89,32 @@
   height: 50px;
 }
 
+.aScroller{
+  border: solid 2px rgb(228, 11, 145);
+  margin: 12px;
+  padding: 6px;
 
+}
 
 @media (max-width: 600px) {
 
-.landingSubTitle{
-  width: 80%;
-  margin-left: 10%;
-}
+  .landingSubTitle{
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .scrollersCont{
+    margin-top: 33px;
+    margin-bottom: 33px;
+  }
+  .indexCont{
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .aScroller{
+    margin: 21px 12px;
+  }
 }

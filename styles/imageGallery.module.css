@@ -22,7 +22,8 @@
 }
 
 .imageControllerTab{
-    border: solid 3px rgb(228, 11, 145);
+    background-color: rgb(228, 11, 145);
+    color: white;
     width: fit-content;
     padding: 6px 15px;
     transform: translateY(2px);

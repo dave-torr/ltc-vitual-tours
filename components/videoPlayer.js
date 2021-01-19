@@ -49,8 +49,9 @@ const yacumaPlayerCont=()=>{
                 </div>
             </div>
             <div className={styles.YacumaPlayer}>
-            Yacuma &#9932; Korioto
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLFSQuJvkl7dSNx-pmsf8g8qpI_U9yJcWV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                Yacuma &#9932; Korioto
+                <iframe className={styles.largeIFrame} width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLFSQuJvkl7dSNx-pmsf8g8qpI_U9yJcWV" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe className={styles.smallIFrame} width="392" height="220" src="https://www.youtube.com/embed/videoseries?list=PLFSQuJvkl7dSNx-pmsf8g8qpI_U9yJcWV" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
         </>
     )

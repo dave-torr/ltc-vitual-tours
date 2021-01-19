@@ -8,7 +8,7 @@
 
 .IntroGenCont{
     height: 100vh;
-    /* background-color: burlywood; */
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,7 +19,10 @@
     width: 60%;
 }
 
-.logoAndIntro{margin-left: 15px;}
+.logoAndIntro{
+    margin-left: 15px;
+    box-shadow: 6px 6px 7px black;
+    }
 
 .Fontlogo{
     width: 300px;
@@ -81,6 +84,9 @@
 
 .appTourImage{
     width: 40%;
+    display: flex;
+    align-items: center;
+
 }
 
 .deviceIMG{
@@ -89,8 +95,9 @@
 
 @media (max-width: 1000px) {
     .logoAndIntro{
-    text-align: center;
-    margin-bottom: 33px;        
+        text-align: center;
+        margin-top: 33px; 
+        box-shadow: none;       
     }
 
     .Fontlogo{
@@ -98,7 +105,7 @@
     }
     .IntroGenCont{
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: start;
         align-items: center;
     }
     .LandingImg{
