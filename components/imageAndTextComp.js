@@ -113,6 +113,7 @@ function PackingList(props){
 
         return(
             <>
+                <div className={styles.packListImgCont}>
                 <div className={styles.PackListImage2} onClick={()=>{
                     setMapDialogueCont(true)
                 }}>
@@ -141,6 +142,7 @@ function PackingList(props){
                         height={600}
                         alt="Instagram Icon link"
                     /></div>
+                </div>
             </>
         )
     }
