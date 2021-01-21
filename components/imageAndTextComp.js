@@ -48,12 +48,44 @@ function AppExplainer(props){
         </>
     )
 };
+
+import PackingListData from "./data/packingList.json"
+
 function PackingList(props){
 
     return(
         <>
-            <div>
-                Packing Lists
+            <div className={styles.packingListGenCont}>
+                <div className={styles.landingTitle}> 
+                    Packing List</div>
+                <div className={styles.packingListRowsORCols}>
+                    <div className={styles.packListColOne}>
+                        <div className={styles.PackListImage}>
+                            <Image
+                                src="/photogallery/packinglist.jpg"
+                                width={900}
+                                height={600}
+                                alt="Instagram Icon link"
+                            />
+                            </div>
+                    </div>
+
+                    <div className={styles.packListColTwo}>
+                        <div className={styles.PackListIntro}> 
+                            Get geared up and excited for an adventure in the Galapagos Islands!
+                            </div>
+                        <form className={styles.PackListSections}>
+
+
+
+                            <div className={styles.aPackLsitSec}>
+                                <div className={styles.aPackLsitSecTitle}></div>
+                                <div className={styles.aPackLsitSecItem}></div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </div>
         </>
     )

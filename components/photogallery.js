@@ -5,6 +5,7 @@ import Image from "next/image"
 import photogallery from "./../data/photogallery.json"
 
 import styles from "./../styles/imageGallery.module.css"
+
 /////////////////////////////////////////////
 /////////////////////////////////////////////
 function Photogallery(props){
@@ -158,4 +159,25 @@ const imageControllers=()=>{
             {imageDisplayer()}
         </div>
     )
-} export {Photogallery}
+};
+
+
+let prlxImg1 = "./photogallery/wideAndLow/layingSeaLion.jpg"
+function Parallaxer(props){
+    
+    return(
+        <>  
+            <div className={styles.parallaxShadowEffect}> </div>
+            <div className={styles.homeParallax} style={{
+                backgroundImage:`url(${prlxImg1})`,
+                width: "100%",
+                transform: `translate(0px, 0px)`,
+                minHeight: "310px",
+                backgroundSize: "100% auto",
+                backgroundAttachment: "fixed",
+                backgroundRepeat: "no-repeat",
+                backgroundPositionY: "center"
+                }}></div>
+        </>
+    )
+} export {Photogallery, Parallaxer}

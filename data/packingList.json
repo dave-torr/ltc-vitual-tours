@@ -1,0 +1,45 @@
+[
+    {
+        "packingListTitle": "Base Layer",
+        "PLItems": [
+            "Quick dry T-Shirt or Tanktop",
+            "Quick dry shorts",
+            "Running or Hiking socks"
+        ],
+        "optional": true
+    },
+    {
+        "packingListTitle": "First (Mid) Layer",
+        "PLItems": [
+            "Sun Hat (neck coverage encouraged)",
+            "Light T-Shirt",
+            "light Long Sleeved shirt",
+            "Light fleece or light flannel jacket",
+            "soft-shell or waterproof jacket",
+            "light Hiking pants",
+            "light hiking shorts"
+        ],
+        "optional": false
+    },
+    {
+        "packingListTitle": "Footware",
+        "PLItems": [
+            "Active/Hiking Sandals",
+            "Flip Flops",
+            "Trail running or light-hiking shoes",
+            "Travel/streeet shoes"
+        ],
+        "optional": false
+    },
+    {
+        "packingListTitle": "Essentials",
+        "PLItems": [
+            "Small hiking backpack (25L - 30L)",
+            "Coral-safe, High SPF rating sunscreen*",
+            "Polarized Sunglasses",
+            "Bamboo / biodegradeable Toothbrush",
+            "Camera (underwater sports camera encouraged)"
+        ],
+        "optional": false
+    }
+]

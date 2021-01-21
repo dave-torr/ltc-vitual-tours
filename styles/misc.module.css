@@ -8,7 +8,6 @@
 
 .IntroGenCont{
     height: 100vh;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,6 +91,47 @@
 .deviceIMG{
     width: 80%;
 }
+
+.sectionIntro{
+    margin: 12px;
+}
+
+
+.packingListRowsORCols{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.packListColOne{
+    width: 45%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+}
+
+.PackListImage{
+    padding: 12px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.36);
+}
+
+
+.packListColTwo{
+    width: 50%;
+}
+
+.PackListIntro{
+    text-align: start;
+    margin-top: 150px;
+    font-size: 1.5em;
+    /* text-transform: lowercase; */
+    padding-left: 100px;
+    font-style: italic;
+}
+
+
 
 @media (max-width: 1000px) {
     .logoAndIntro{
