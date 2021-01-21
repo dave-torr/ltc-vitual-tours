@@ -6,7 +6,8 @@
             "Quick dry shorts",
             "Running or Hiking socks"
         ],
-        "optional": true
+        "optional": true,
+        "icon": "&#9898;"
     },
     {
         "packingListTitle": "First (Mid) Layer",
@@ -19,7 +20,8 @@
             "light Hiking pants",
             "light hiking shorts"
         ],
-        "optional": false
+        "optional": false,
+        "icon": "&#9899;"
     },
     {
         "packingListTitle": "Footware",
@@ -29,7 +31,8 @@
             "Trail running or light-hiking shoes",
             "Travel/streeet shoes"
         ],
-        "optional": false
+        "optional": false,
+        "icon": "&#9826;"
     },
     {
         "packingListTitle": "Essentials",
@@ -40,6 +43,7 @@
             "Bamboo / biodegradeable Toothbrush",
             "Camera (underwater sports camera encouraged)"
         ],
-        "optional": false
+        "optional": false,
+        "icon": "&#9825;"
     }
 ]

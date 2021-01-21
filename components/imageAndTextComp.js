@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
-import styles from '../styles/misc.module.css'
 import Image from "next/image"
+import styles from '../styles/misc.module.css'
+
+import PackingListData from "./../data/packingList.json"
+
+import { Dialog } from '@material-ui/core';
 
 
 function VtIntro(props){
@@ -28,7 +32,8 @@ function VtIntro(props){
         </>
     )
 };
-
+///////////////////////////
+///////////////////////////
 function AppExplainer(props){
     return(
         <>
@@ -48,10 +53,97 @@ function AppExplainer(props){
         </>
     )
 };
-
-import PackingListData from "./data/packingList.json"
-
+///////////////////////////
+///////////////////////////
 function PackingList(props){
+    const [mapDialog, setMapDialogueCont] = useState(false)
+
+
+// Checkboxes
+    function createMarkup(data) {
+    return {__html: `${data}`};
+    }
+    function IconHTMLer(data) {
+    return <div dangerouslySetInnerHTML={createMarkup(data)} />;
+    }
+    const packingListSection=(data)=>{
+        let aPackListSection = data.map((elems, i)=>
+            <>
+            <div className={styles.aPackLsitSec} key={`packListSection${i}`}>
+                <div className={styles.aPackLsitSecTitle}> 
+                    {elems.packingListTitle}</div>
+                {elems.optional?
+                    <><div className={styles.aPackListOptional}> * Optional </div></>:
+                    <><br></br> </>}
+                <div>
+                    {packingListCheckbox(elems.PLItems)}
+                </div>
+                <div className={styles.PLIcon}> 
+                    {IconHTMLer(elems.icon)}
+                </div>
+            </div>
+            </>
+        )
+
+        return(
+            <>
+                {aPackListSection}
+            </>
+        )
+    }
+    const packingListCheckbox=(data)=>{
+        let packListCheckboxes= data.map((elems, i)=>
+            <>
+                <div style={{"display": "flex"}} key={`packListItem${i}`} className={styles.aCheckbox} >
+                    <input type="checkbox" id={`elem${elems}`} name={`elem${elems}`} value={`elem${elems}`} />
+                    <label htmlFor={`elem${elems}`} className={styles.aCheckboxLabel} > {elems}</label>
+                </div>
+            </>
+            )
+
+        return(
+            <>
+                {packListCheckboxes}
+            </>
+        )
+    }
+
+// Images
+    const imageColumn=()=>{
+
+        return(
+            <>
+                <div className={styles.PackListImage2} onClick={()=>{
+                    setMapDialogueCont(true)
+                }}>
+                    <Image
+                        src="/photogallery/oldmaps/albatrossexpedition.jpg"
+                        width={720}
+                        height={789}
+                        alt="Instagram Icon link"
+                    /></div>
+                    <Dialog open={mapDialog} onClose={()=>setMapDialogueCont(false)}>
+                        <div className={styles.galMapDialogue}>
+                            <Image
+                                width={1200}
+                                height={1315}
+                                alt="Galapgos Islands - 1891 Map - Albatross Fishing Route"
+                                src="/photogallery/oldmaps/albatrossexpedition.jpg"
+                            />
+                        </div>
+                        <div className={styles.mapDialSubtitle}> Galapgos Islands - 1891 Map - Albatross Fishing Route</div>
+                    </Dialog>
+
+                <div className={styles.PackListImage}>
+                    <Image
+                        src="/photogallery/packinglist.jpg"
+                        width={900}
+                        height={600}
+                        alt="Instagram Icon link"
+                    /></div>
+            </>
+        )
+    }
 
     return(
         <>
@@ -60,29 +152,14 @@ function PackingList(props){
                     Packing List</div>
                 <div className={styles.packingListRowsORCols}>
                     <div className={styles.packListColOne}>
-                        <div className={styles.PackListImage}>
-                            <Image
-                                src="/photogallery/packinglist.jpg"
-                                width={900}
-                                height={600}
-                                alt="Instagram Icon link"
-                            />
-                            </div>
+                    <div className={styles.PackListIntro}> 
+                        Get geared up and excited for an <br></br>adventure in the Galapagos Islands!
+                        </div>
+                        {imageColumn()}
                     </div>
-
                     <div className={styles.packListColTwo}>
-                        <div className={styles.PackListIntro}> 
-                            Get geared up and excited for an adventure in the Galapagos Islands!
-                            </div>
                         <form className={styles.PackListSections}>
-
-
-
-                            <div className={styles.aPackLsitSec}>
-                                <div className={styles.aPackLsitSecTitle}></div>
-                                <div className={styles.aPackLsitSecItem}></div>
-                            </div>
-
+                            {packingListSection(PackingListData)}
                         </form>
                     </div>
                 </div>

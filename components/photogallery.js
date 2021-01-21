@@ -1,6 +1,7 @@
-import { Dialog } from '@material-ui/core';
 import { useState, useEffect } from "react";
 import Image from "next/image"
+
+import { Dialog } from '@material-ui/core';
 
 import photogallery from "./../data/photogallery.json"
 

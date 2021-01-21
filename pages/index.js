@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import { useState } from 'react'
+import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 import {Photogallery, Parallaxer} from "./../components/photogallery"

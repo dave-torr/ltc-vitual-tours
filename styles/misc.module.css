@@ -100,7 +100,7 @@
 .packingListRowsORCols{
     display: flex;
     flex-direction: row;
-
+    justify-content: space-between;
 }
 
 .packListColOne{
@@ -117,21 +117,81 @@
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.36);
 }
 
+.PackListImage2{
+    width: 60%;    
+    padding: 12px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.36);
+    margin-left: 33%;
+    position: relative;
+    transform: translateY(60px);
+    z-index: 2;
+    background-color: white;
+
+}
 
 .packListColTwo{
     width: 50%;
 }
 
 .PackListIntro{
-    text-align: start;
-    margin-top: 150px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     font-size: 1.5em;
-    /* text-transform: lowercase; */
-    padding-left: 100px;
     font-style: italic;
+    text-align: end;
 }
 
+.PackListSections{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
 
+.aPackLsitSec{
+    width: 45%;
+    margin: 5px;
+}
+
+.aPackLsitSecTitle{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 9px;
+
+}
+
+.aPackListOptional{
+    font-size: 0.7em;
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 21px;
+    margin-bottom: 15px;
+}
+
+.aCheckbox{
+    display: flex;
+    align-items: center;
+}
+.aCheckboxLabel{
+    text-transform: capitalize;
+    margin: 4px;
+}
+
+.PLIcon{
+    font-size: 2em;
+    margin: 15px 15px;
+}
+
+.galMapDialogue{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.mapDialSubtitle{
+    text-align: end;
+    font-style: italic;
+    font-size: 1.3em;
+    margin-right: 21px;
+}
 
 @media (max-width: 1000px) {
     .logoAndIntro{
@@ -179,6 +239,20 @@
     .deviceIMG{
         width: 90%;
     }
+
+    .packingListRowsORCols{
+        flex-direction: column;
+    }
+    .packListColOne{
+        width: 97%;
+    }
+    .packListColTwo{
+        width: 97%;
+        padding-left: 21px;
+        background-color: coral;
+    }
+
+
 }
 
 @media (max-width: 600px) {
