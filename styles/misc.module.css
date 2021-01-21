@@ -105,20 +105,24 @@
 
 .packListColOne{
     width: 45%;
-    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 12px;
 }
 
+.packListImgCont{
+    display: flex;
+    flex-direction: column;
+}
 .PackListImage{
+    width: 70%;    
     padding: 12px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.36);
 }
 
 .PackListImage2{
-    width: 60%;    
+    width: 55%;    
     padding: 12px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.36);
     margin-left: 33%;
