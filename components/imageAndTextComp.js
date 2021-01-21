@@ -118,18 +118,18 @@ function PackingList(props){
                     setMapDialogueCont(true)
                 }}>
                     <Image
-                        src="/photogallery/oldmaps/albatrossexpedition.jpg"
                         width={720}
                         height={789}
-                        alt="Instagram Icon link"
+                        alt="Galapagos Islands - 1891 Map - Albatross Fishing Route"
+                        src="/photogallery/oldMaps/albatrossexpedition.jpg"
                     /></div>
                     <Dialog open={mapDialog} onClose={()=>setMapDialogueCont(false)}>
                         <div className={styles.galMapDialogue}>
                             <Image
                                 width={1200}
                                 height={1315}
-                                alt="Galapgos Islands - 1891 Map - Albatross Fishing Route"
-                                src="/photogallery/oldmaps/albatrossexpedition.jpg"
+                                alt="Galapagos Islands - 1891 Map - Albatross Fishing Route"
+                                src="/photogallery/oldMaps/albatrossexpedition.jpg"
                             />
                         </div>
                         <div className={styles.mapDialSubtitle}> Galapgos Islands - 1891 Map - Albatross Fishing Route</div>
