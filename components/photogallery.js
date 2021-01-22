@@ -48,10 +48,10 @@ const imageThumbnailGrid=()=>{
     let galThumbnailNumber;
 
     if(!galleryExpander){
-        galThumbnailNumber=photogallery.slice(0,4);
-    } else {
-        galThumbnailNumber=photogallery
-    }
+            galThumbnailNumber=photogallery.slice(0,4);
+        } else {
+            galThumbnailNumber=photogallery
+        }
 
     let anImage = galThumbnailNumber.map((elem, i)=>
         <div key={`image${i}`} 
@@ -122,6 +122,9 @@ const imageData=()=>{
         </div>
         <div className={styles.imageDescriptionTxt}>
             {photogallery[picIndex].description}
+        </div>
+        <div className={styles.imageDownload}>
+            <a href={photogallery[picIndex].pathname} download>  download &#9857; </a>
         </div>
         </>
     )
