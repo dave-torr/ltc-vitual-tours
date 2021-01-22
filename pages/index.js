@@ -7,7 +7,6 @@ import {VideoPlayer} from "./../components/videoPlayer"
 import {VrDisplayer} from "./../components/vrVisualizer"
 
 import {VtIntro, AppExplainer, PackingList, DiscountAndInvite} from "./../components/imageAndTextComp"
-
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 export default function Home() {
@@ -25,24 +24,28 @@ const appIndex=()=>{
         <div className={styles.scrollersCont}>
           <div className={styles.aScroller} onClick={()=>{
             let PhotoScroller = document.getElementById("picGalleryAnchor");
-            PhotoScroller.scrollIntoView({behavior: "smooth"});
-            }}> 
-            &#9886; Photo Gallery </div>
+              PhotoScroller.scrollIntoView({behavior: "smooth"});
+              }}> 
+              &#9886; 
+            Photo Gallery </div>
           <div className={styles.aScroller} onClick={()=>{
             let PackingListScroller = document.getElementById("packingListAnchor");
-            PackingListScroller.scrollIntoView({behavior: "smooth"});
-            }}> 
-            &#9745; Galapagos Packing List </div>
+              PackingListScroller.scrollIntoView({behavior: "smooth"});
+              }}> 
+              &#9745; 
+            Galapagos Packing List </div>
           <div className={styles.aScroller} onClick={()=>{
             let tourDatesScroller = document.getElementById("tourdatesAnddiscountAnchor");
-            tourDatesScroller.scrollIntoView({behavior: "smooth"});
-            }}> 
-            &#9965; Galapagos Island Hopping Tour </div>
+              tourDatesScroller.scrollIntoView({behavior: "smooth"});
+              }}> 
+              &#9965; 
+            Galapagos Island Hopping Tour </div>
           <div className={styles.aScroller} onClick={()=>{
             let ExtrasScroller = document.getElementById("VtExtrasAnchor");
-            ExtrasScroller.scrollIntoView({behavior: "smooth"});
-            }}> 
-            &#9835; Additionals </div>
+              ExtrasScroller.scrollIntoView({behavior: "smooth"});
+              }}> 
+              &#9835; 
+            Additionals </div>
         </div>
       </div>
     </>
@@ -56,7 +59,8 @@ const VirtualtourExtras=()=>{
     <>
       <div className={styles.extrasGenCont} id="VtExtrasAnchor" >
         <div className={styles.landingTitle} > Vitual Tour Extras! </div>
-        <div className={styles.landingSubTitle}> We are happy to share these exclusive Ecuadorian artits' features, which are almost guaranteed to make you dance.  </div>
+        <div className={styles.landingSubTitle}> Exclusive Ecuadorian artists' features,
+        <br></br>guaranteed to make you dance.  </div>
           <div className={styles.anAddOnController}>
             {koriotoController?
                 <>
@@ -67,7 +71,7 @@ const VirtualtourExtras=()=>{
                 </>:<>
                     <div className={styles.ControllerTab}
                     onClick={()=>{setKoriotoController(true)}}> 
-                        Open Korioto Player &#9732;
+                        Open Korioto Video Player &#9732;
                     </div>
                 </>}
           </div>

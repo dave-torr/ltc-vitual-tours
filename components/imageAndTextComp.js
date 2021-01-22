@@ -41,10 +41,15 @@ function AppExplainer(props){
                 <div className={styles.appTourTextCont} > 
                     <div className={styles.appIntroTitle}> Your galapagos islands <br></br> virtual tour mini-app 
                     </div>
-                    <div className={styles.appIntroSubTitle}> Access complimentary information, a downloadable photo gallery, packing lists and much more!
+                    <div className={styles.appIntroSubTitle}> In addition to the virtual session you can access: 
+                    <br></br> <br></br> - a downloadable photo gallery 
+                    <br></br> - complimentary information on 
+                    <br></br>Ecuador & The Galapagos
+                    <br></br> - packing lists 
+                    <br></br> - awesome Ecuadorian music 
+                    <br></br> - some cool extras!
                     </div>
-                    <div className={styles.appIntroText}> In addition to the virtual session, you can access this site anytime you want, learn more about the Galapagos Islands, listen to some amazing music, gather information about upcoming trips, or watch some of the exclusive content we have created for you!
-                    </div>
+
                 </div>
                 <div className={styles.appTourImage}>
                     <img src="/miscPics/mobileExample.png" className={styles.deviceIMG}  />
@@ -56,8 +61,9 @@ function AppExplainer(props){
 ///////////////////////////
 ///////////////////////////
 function PackingList(props){
-    const [mapDialog, setMapDialogueCont] = useState(false)
 
+    const [openPackingList, setPackingListController] = useState(true)
+    const [mapDialog, setMapDialogueCont] = useState(false)
 
 // Checkboxes
     function createMarkup(data) {
@@ -132,7 +138,9 @@ function PackingList(props){
                                 src="/photogallery/oldMaps/albatrossexpedition.jpg"
                             />
                         </div>
-                        <div className={styles.mapDialSubtitle}> Galapgos Islands - 1891 Map - Albatross Fishing Route</div>
+                        <div className={styles.mapDialSubtitle}> Galapagos Islands - 1891 Map - 'Albatross' Fishing Vessel Routes</div>
+                    <div className={styles.closeImgBTN}
+                        onClick={()=>{setMapDialogueCont(false)}}> &#9932; </div>                        
                     </Dialog>
 
                 <div className={styles.PackListImage}>
@@ -152,6 +160,24 @@ function PackingList(props){
             <div className={styles.packingListGenCont}>
                 <div className={styles.landingTitle}> 
                     Packing List</div>
+                <div className={styles.controllerDiv}>
+                    {openPackingList? <>
+                        <div className={styles.closeDivBTN}
+                            onClick={()=>{
+                                setPackingListController(false)
+                            }}> 
+                        Close Packing List &#9745; </div>
+                        </>:<>
+                            <div className={styles.closeDivBTN}
+                                onClick={()=>{
+                                    setPackingListController(true)
+                                }}> 
+                            Open Packing List &#9744; </div>
+                        </>}
+                </div>
+
+                {openPackingList&&
+                <> 
                 <div className={styles.packingListRowsORCols}>
                     <div className={styles.packListColOne}>
                     <div className={styles.PackListIntro}> 
@@ -165,16 +191,88 @@ function PackingList(props){
                         </form>
                     </div>
                 </div>
+                </>}
             </div>
         </>
     )
 };
+
+
+
+
+
+
+///////////////////////////
+///////////////////////////
 function DiscountAndInvite(props){
+    const [openIslandHopping, SetIslandHoppingController] = useState(false)
+    const islandHoppingTourDisplayer=()=>{
+        
+        return(
+            <>
+                <div className={styles.tourDispCont}>
+                    <div className={styles.landingTitle}> 
+                        Galapagos Island Hopping</div>
+                    <div className={styles.controllerDiv}>
+                            {openIslandHopping? <>
+                                <div className={styles.closeDivBTN}
+                                    onClick={()=>{
+                                        SetIslandHoppingController(false)
+                                    }}> 
+                                Close Island Hopping Tour &#9790; </div>
+                                </>:<>
+                                    <div className={styles.closeDivBTN}
+                                        onClick={()=>{
+                                            SetIslandHoppingController(true)
+                                        }}> 
+                                Open Island Hopping Tour &#9788; </div>
+                                </>}
+                        </div>
+
+                    <div className={styles.datePromoter}>
+                        <div className={styles.datePromoterImg}> 
+                            <Image
+                                width={2048}
+                                height={948}
+                                alt="Sunset over Islet - Isabela Island"
+                                src="/photogallery/wideAndLow/marielitasSunset.jpg"
+                            />
+
+                            <div className={styles.imageTextOverlay}>
+                                <div className={styles.datePromoTitle}> 
+                                    Join us on a 2021 or 2022 <br></br>Galapagos Island Hopping Voyage! 
+                                </div>
+                                <div className={styles.datePromoDetailList}> 
+                                    - small group adventure departures <br></br> 
+                                    - wildlife encounters unique to the Galapagos<br></br> 
+                                    - round trip flights from Quito to Galapagos<br></br> 
+                                    - amazing perks and exclusives!<br></br> 
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </>
+        )
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     return(
         <>
-            <div>
-                Digital Brochure Download / Tour video / Discount Cupon
+            <div style={{"width": "100%"}}>
+                 {islandHoppingTourDisplayer()}
+                
+                <br></br>Tour video / Discount Cupon
             </div>
         </>
     )

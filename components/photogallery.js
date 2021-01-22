@@ -108,6 +108,8 @@ const imageDisplayer=()=>{
                 </div>
                 {imageData()}
                 {imageControllers()}
+                <div className={styles.closeImgBTN}
+                onClick={()=>{props.closeImgViewer(false)}}> &#9932; </div>
         </Dialog>
         </>
     )

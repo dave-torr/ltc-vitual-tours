@@ -21,6 +21,15 @@
     margin: 0;
 }
 
+.closeImgBTN{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 3em;
+    margin: 6px;
+}
+
 .imageControllerTab{
     background-color: rgb(228, 11, 145);
     color: white;

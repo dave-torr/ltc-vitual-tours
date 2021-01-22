@@ -31,12 +31,12 @@
 }
 
 .landingSubTitle{
-  border-top: solid 4px teal;
-  border-bottom: solid 4px teal;
+  border-top: solid 3px teal;
+  border-bottom: solid 3px teal;
   font-size: 1.3em;
   text-align: center;
-  width: 50%;
-  margin-left: 25%;
+  width: 80%;
+  margin-left: 10%;
   margin-bottom: 21px;
   padding-top: 15px;
   padding-bottom: 15px;

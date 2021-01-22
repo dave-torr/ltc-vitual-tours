@@ -6,6 +6,29 @@
     margin: 12px 0;
 }
 
+.controllerDiv{
+    width: 100%;
+    border-bottom: solid 3px rgb(228, 11, 145);
+}
+
+.closeDivBTN{
+    background-color: rgb(228, 11, 145);
+    width: fit-content;
+    padding: 9px 12px;
+    color: white;
+    margin-right: 3px;
+    transform: translateY(2px);
+}
+
+.closeImgBTN{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 3em;
+    margin: 6px;
+}
+
 .IntroGenCont{
     height: 100vh;
     display: flex;
@@ -101,6 +124,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: dashed 2px rgba(0, 0, 0, 0.238);
+    padding-bottom: 12px;
 }
 
 .packListColOne{
@@ -151,11 +176,6 @@
     justify-content: space-evenly;
 }
 
-.aPackLsitSec{
-    width: 45%;
-    margin: 5px;
-}
-
 .aPackLsitSecTitle{
     font-size: 1.5em;
     font-weight: 700;
@@ -192,7 +212,6 @@
 .mapDialSubtitle{
     text-align: end;
     font-style: italic;
-    font-size: 1.3em;
     margin-right: 21px;
 }
 
@@ -203,12 +222,46 @@
 
 
 
+.tourDispCont{
+    width: 100%;
+    min-height: 40px;
+}
+
+.datePromoterImg{
+    position: relative;
+}
+
+.imageTextOverlay{
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    background-color:black;
+    width: 100%;
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.741);
+}
+
+.datePromoTitle{
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 700;
+    margin: 22px;
+}
+
+.datePromoDetailList{
+    margin: 39px;
+    color: rgb(228, 11, 145);
+    font-size: 1.3em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
 
 
 @media (max-width: 1000px) {
     .logoAndIntro{
         text-align: center;
-        margin-top: 33px; 
+        margin-top: 15vh; 
         box-shadow: none;       
     }
 
@@ -300,7 +353,7 @@
         width: 100%;
     }
     .aPackLsitSec{
-        width: 200px;
+        width: 100%;
         margin: 5px;
     }
 
@@ -310,14 +363,16 @@
         font-size: 1.1em;
     }    
     .aPackLsitSecTitle{
-        font-size: 1.2em;
+        font-size: 2em;
     }
     .aCheckbox{
-        font-size: 0.9em;
+        font-size: 1.2em;
     }
 
     .PLIcon{
-        font-size: 1em;
+        font-size: 2em;
         margin: 6px 15px;
+        text-align: end;
+        
     }
 }
