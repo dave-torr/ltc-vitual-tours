@@ -235,28 +235,35 @@
     position: absolute;
     top: 0;
     z-index: 2;
-    background-color:black;
     width: 100%;
-    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.741);
 }
 
 .datePromoTitle{
-    font-size: 1.8em;
-    letter-spacing: 1px;
+    font-size: 3em;
+    letter-spacing: 2px;
     color: white;
-    font-weight: 700;
-    margin: 22px;
+    font-weight: 200;
+    margin-left: 60%;
+    margin-top: 33px;
 }
 
 .datePromoDetailList{
     margin: 39px;
     color: rgb(228, 11, 145);
-    font-size: 1.3em;
-    font-weight: 300;
+    font-size: 1.8em;
+    font-weight: 600;
     letter-spacing: 1px;
+    text-transform: capitalize;
 }
 
-
+.IconIMGCont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 21px;
+}
 
 @media (max-width: 1000px) {
     .logoAndIntro{
@@ -346,6 +353,19 @@
         margin: 5px;
     }
 
+    .imageTextOverlay{
+        position: relative;
+        top: unset;
+        z-index: 2;
+        width: 100%;
+    }
+    .datePromoTitle{
+        color: black;
+        margin-left: 20%;
+    }
+    .datePromoDetailList{
+        font-size: 1.5em;
+    }   
 }
 
 @media (max-width: 600px) {
@@ -373,6 +393,12 @@
         font-size: 2em;
         margin: 6px 15px;
         text-align: end;
-        
     }
+    .datePromoTitle{
+        font-size: 2em;
+    }
+
+    .datePromoDetailList{
+        font-size: 1.1em;
+    }    
 }

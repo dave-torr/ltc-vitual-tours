@@ -238,8 +238,7 @@ function DiscountAndInvite(props){
                                     height={948}
                                     alt="Sunset over Islet - Isabela Island"
                                     src="/photogallery/wideAndLow/marielitasSunset.jpg"
-                                />
-
+                                    />
                                 <div className={styles.imageTextOverlay}>
                                     <div className={styles.datePromoTitle}> 
                                         Join us on a 2021 or 2022 <br></br>Galapagos Island Hopping Voyage! 
@@ -253,7 +252,36 @@ function DiscountAndInvite(props){
                                     </div>
                             </div>
                         </div>
+                        {iconViewer()}
                     </>}
+                </div>
+            </>
+        )
+    }
+
+    const iconViewer=()=>{
+        return(
+            <>
+                <div className={styles.IconIMGCont}>
+                <div className={styles.anIconImage}>
+                    <Image 
+                        src="/miscPics/tourIcons.PNG"
+                        width={610}
+                        height={240}
+                        alt="tour detail Icons"
+                    />
+                    </div>
+                <a  href="https://explorerchick.com/adventures/galapagos/"
+                    target="_blank"
+                    rel="noopener noreferrer" >
+                <div className={styles.anIconImage}>
+                    <Image 
+                        src="/miscPics/reserveBtn.PNG"
+                        width={451}
+                        height={82}
+                        alt="reserve now Icon"
+                    />
+                    </div></a>
                 </div>
             </>
         )
@@ -263,19 +291,10 @@ function DiscountAndInvite(props){
 
 
 
-
-
-
-
-
-
-
     return(
         <>
             <div style={{"width": "100%"}}>
-                 {islandHoppingTourDisplayer()}
-                
-                <br></br>Tour video / Discount Cupon
+                {islandHoppingTourDisplayer()}
             </div>
         </>
     )

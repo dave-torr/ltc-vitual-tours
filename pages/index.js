@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 import {Photogallery, Parallaxer} from "./../components/photogallery"
-import {VideoPlayer} from "./../components/videoPlayer"
+import {VideoPlayer, TourPlayer} from "./../components/videoPlayer"
 import {VrDisplayer} from "./../components/vrVisualizer"
 
 import {VtIntro, AppExplainer, PackingList, DiscountAndInvite} from "./../components/imageAndTextComp"
@@ -52,9 +52,7 @@ const appIndex=()=>{
   )
 }
 const VirtualtourExtras=()=>{
-
-//put players on a modal??? clients will not be able to lsiten to music while seeing using the rest of the app. 
-
+    //put players on a modal??? clients will not be able to lsiten to music while seeing using the rest of the app. 
   return(
     <>
       <div className={styles.extrasGenCont} id="VtExtrasAnchor" >
@@ -137,7 +135,10 @@ return (
 {/* DiscountAndInvite */}
 <div id="tourdatesAnddiscountAnchor"> </div>
   <DiscountAndInvite 
-    />  
+    />
+  
+  
+  {/* <TourPlayer /> */}
 
 {/* 360 image displayer */}
    {/* <VrDisplayer
