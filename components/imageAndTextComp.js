@@ -205,7 +205,7 @@ function PackingList(props){
 ///////////////////////////
 ///////////////////////////
 function DiscountAndInvite(props){
-    const [openIslandHopping, SetIslandHoppingController] = useState(false)
+    const [openIslandHopping, SetIslandHoppingController] = useState(true)
     const islandHoppingTourDisplayer=()=>{
         
         return(
@@ -229,28 +229,31 @@ function DiscountAndInvite(props){
                                 </>}
                         </div>
 
-                    <div className={styles.datePromoter}>
-                        <div className={styles.datePromoterImg}> 
-                            <Image
-                                width={2048}
-                                height={948}
-                                alt="Sunset over Islet - Isabela Island"
-                                src="/photogallery/wideAndLow/marielitasSunset.jpg"
-                            />
+                    {openIslandHopping&&
+                    <>
+                        <div className={styles.datePromoter}>
+                            <div className={styles.datePromoterImg}> 
+                                <Image
+                                    width={2048}
+                                    height={948}
+                                    alt="Sunset over Islet - Isabela Island"
+                                    src="/photogallery/wideAndLow/marielitasSunset.jpg"
+                                />
 
-                            <div className={styles.imageTextOverlay}>
-                                <div className={styles.datePromoTitle}> 
-                                    Join us on a 2021 or 2022 <br></br>Galapagos Island Hopping Voyage! 
-                                </div>
-                                <div className={styles.datePromoDetailList}> 
-                                    - small group adventure departures <br></br> 
-                                    - wildlife encounters unique to the Galapagos<br></br> 
-                                    - round trip flights from Quito to Galapagos<br></br> 
-                                    - amazing perks and exclusives!<br></br> 
+                                <div className={styles.imageTextOverlay}>
+                                    <div className={styles.datePromoTitle}> 
+                                        Join us on a 2021 or 2022 <br></br>Galapagos Island Hopping Voyage! 
                                     </div>
-                                </div>
+                                    <div className={styles.datePromoDetailList}> 
+                                        - small group adventure departures <br></br> 
+                                        - wildlife encounters unique to the Galapagos<br></br> 
+                                        - round trip flights from Quito to Galapagos<br></br> 
+                                        - amazing perks and exclusives!<br></br> 
+                                        </div>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
+                    </>}
                 </div>
             </>
         )
